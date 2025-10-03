@@ -43,8 +43,7 @@ n = len(X)
 
 lines = {}
 
-for i in range(iteration):
-
+for i in range(iteration):<br>
     y_pred = m * X + b
     
     error = y - y_pred
