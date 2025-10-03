@@ -75,7 +75,7 @@ final_cost = np.mean((y - final_predictions)**2)
 
 print(f"Final cost (MSE): {final_cost:.6f}")
 
-plt.scatter(X[:, 0], y, color="red", label="Data points", alpha=0.7, s=50)
+plt.scatter(X[:, 0], y, color="red", label="Data points")
 
 plt.title("Gradient Descent Progress for Startup Profit Prediction")
 
