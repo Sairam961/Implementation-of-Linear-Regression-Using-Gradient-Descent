@@ -50,7 +50,7 @@ for i in range(iteration):
     db = (-2/n) * np.sum(error)
     m -= lr * dm
     b -= lr * db
-    if i in [0, 100, 200, 300, 400,500,600,700,800,900]: 
+    if i in [0,100, 200, 300, 400,500,600,700,800,900]:                
         lines[i] = (m, b)
     if i % 100 == 0:  
         cost = np.mean(error**2)<br>
