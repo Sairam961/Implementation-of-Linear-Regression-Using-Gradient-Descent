@@ -90,8 +90,7 @@ plt.show()
 
 
 ## Output:
-![linear regression using gradient descent](sam.png)
-
+<img src="ex3.png" alt="Output" width="500">
 
 ## Result:
 Thus the program to implement the linear regression using gradient descent is written and verified using python programming.
