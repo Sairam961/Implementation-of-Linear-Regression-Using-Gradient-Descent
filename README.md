@@ -43,27 +43,17 @@ n = len(X)
 
 lines = {}
 
-for i in range(iteration):<br>
-    y_pred = m * X + b
-    
+for i in range(iteration):
+    y_pred = m * X + b    
     error = y - y_pred
-    
     dm = (-2/n) * np.sum(X * error)
-    
     db = (-2/n) * np.sum(error)
-    
     m -= lr * dm
-    
     b -= lr * db
-    
     if i in [0, 100, 200, 300, 400,500,600,700,800,900]: 
-    
         lines[i] = (m, b)
-        
     if i % 100 == 0:  
-    
-        cost = np.mean(error**2)
-        
+        cost = np.mean(error**2)<br>
         print(f"Iteration {i}: m={m:.4f}, b={b:.4f}, cost={cost:.6f}")
         
 
