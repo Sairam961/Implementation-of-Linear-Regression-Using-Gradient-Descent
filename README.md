@@ -16,13 +16,15 @@ To write a program to predict the profit of a city using the linear regression m
 
 4.Adjust the slope and intercept using gradient descent formula.
 
-## Program:
+## Program
+
 ```
 /*
 Program to implement the linear regression using gradient descent.
 Developed by: R.Sairam
 RegisterNumber:  25000694
 */
+
 ```
 
 import numpy as np
@@ -44,16 +46,26 @@ n = len(X)
 lines = {}
 
 for i in range(iteration):
-    y_pred = m * X + b    
+
+y_pred = m * X + b    
     error = y - y_pred
-    dm = (-2/n) * np.sum(X * error)
-    db = (-2/n) * np.sum(error)
+    
+    dm = (-2/n)*np.sum(X * error)
+    
+    db = (-2/n)*np.sum(error)
+    
     m -= lr * dm
+    
     b -= lr * db
+    
     if i in [0,100, 200, 300, 400,500,600,700,800,900]:                
+    
         lines[i] = (m, b)
+        
     if i % 100 == 0:  
-        cost = np.mean(error**2)<br>
+    
+    cost = np.mean(error**2)
+    
         print(f"Iteration {i}: m={m:.4f}, b={b:.4f}, cost={cost:.6f}")
         
 
