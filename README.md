@@ -68,8 +68,24 @@ if i % 100 == 0:
  cost = np.mean(error**2)
     
 print(f"Iteration {i}: m={m:.4f}, b={b:.4f}, cost={cost:.6f}")
-        
 
+final_predictions = np.dot(X, m) + b
+
+final_cost = np.mean((y - final_predictions)**2)
+
+print(f"Final cost (MSE): {final_cost:.6f}")
+
+plt.scatter(X[:, 0], y, color="red", label="Data points", alpha=0.7, s=50)
+
+plt.title("Gradient Descent Progress for Startup Profit Prediction")
+
+plt.xlabel("R&D Spend")
+
+plt.ylabel("Profit")
+
+plt.legend()
+
+plt.show()
 
 
 
